@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* Core */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p { line-height: 1.7; }
+
+/* Utility classes */
+.container {
+    padding: 1.2rem 1rem;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.logo-text {
+    color: rgb(98, 156, 210);
+}
+
+.btn-offer {
+    padding: .5rem 2rem;
+    background: rgb(43, 87, 128);
+    color: #fff;
+    border-radius: 5px;
+    align-self: center;
+    display: inline-block;
+}
+
+.btn-offer:hover {
+    background: rgb(26, 93, 157);;
+}
+
+/* Section: header */
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .header-container .logo {
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+/* Section: best-isp */
+#best-isp .best-isp-container .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#best-isp .best-isp-container .items > * {
+    justify-self: center;
+    align-self: center;
+}
+
+#best-isp .best-isp-container .items .left-part h2 {
+    margin-bottom: 1.2rem;
+}
+
+#best-isp .best-isp-container .items .left-part p {
+    text-align: justify;
+}
+
+#best-isp .best-isp-container .items .left-part .btn-offer {
+    margin-top: 1.2rem;
+}
+
+/* Section: why-ispwifi */
+#why-ispwifi .why-ispwifi-container .first-text h3 {
+    font-size: 1.5rem;
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1.2rem;
+    grid-gap: 10px;
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item {
+    display: flex;
+    border: 1px solid #ebebeb;
+    padding: 1.2rem 2rem;
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item > *  {
+    align-self: center;
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item > i {
+    margin-right: 1.2rem;
+    font-size: 1.5rem;
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item:nth-child(1) i {
+    color:rgb(26, 93, 157);
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item:nth-child(2) i {
+    color:rgb(65, 157, 26);
+}
+
+#why-ispwifi .why-ispwifi-container .icons-container .item:nth-child(3) i {
+    color:rgb(90, 59, 21);
+}
+
+/* Footer */
+footer .footer-container p {
+    text-align: center;
+    padding: .3rem 0;
+}
+
+/* For smaller devices */
+@media screen and (max-width: 1000px) {
+
+    #best-isp .best-isp-container .items {
+        grid-template-columns: 1fr;
+    }
+
+    #best-isp .best-isp-container .items .right-part {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    #why-ispwifi .why-ispwifi-container .icons-container .item {
+        flex-direction: column;
+    }
+
+    #why-ispwifi .why-ispwifi-container .icons-container .item > i {
+        margin-bottom: 1.2rem;
+    }
+
+    #why-ispwifi .why-ispwifi-container .icons-container .item {
+        text-align: center;
+    }
+
+    #why-ispwifi .why-ispwifi-container .icons-container .item b {
+        line-height: 1.75;
+    }
+
+    #why-ispwifi .why-ispwifi-container .icons-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+    #best-isp .best-isp-container .items .left-part .btn-offer {
+        width: 100%;
+        text-align: center;
+    }
+}
